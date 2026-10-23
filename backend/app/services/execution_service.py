@@ -37,6 +37,7 @@ class ExecutionManager:
                     logger.warning("Docker daemon is not running (local execution fallback enabled).")
                     logger.debug(f"Docker daemon connection check failed: {e}")
             else:
+                logger.warning("Docker library is not installed.")
         return self._client
 
     @client.setter
