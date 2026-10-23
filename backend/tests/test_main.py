@@ -247,7 +247,8 @@ def test_get_dashboard_with_data():
 # 21. Test Local Execution Fallback
 def test_local_execution_fallback(monkeypatch):
     from app.api.routers import execution_router
-    monkeypatch.setattr(execution_router.execution_manager, "client", None)
+    monkeypatch.setattr(execution_router.execution_manager, "_client", None)
+    monkeypatch.setattr(execution_router.execution_manager, "_client_checked", True)
 
     # Start session
     sess_res = client.post("/sessions/start", json={"language": "python"})

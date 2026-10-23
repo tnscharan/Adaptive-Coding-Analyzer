@@ -37,8 +37,12 @@ class ExecutionManager:
                     logger.warning("Docker daemon is not running (local execution fallback enabled).")
                     logger.debug(f"Docker daemon connection check failed: {e}")
             else:
-                logger.warning("Docker library is not installed.")
         return self._client
+
+    @client.setter
+    def client(self, value):
+        self._client = value
+        self._client_checked = True
 
     async def _run_local_async(self, code: str, language: str, timeout: int):
         import sys
