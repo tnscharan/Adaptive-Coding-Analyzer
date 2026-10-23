@@ -1,0 +1,125 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run All",
+			"dependsOn": ["backend", "frontend"],
+			"dependsOrder": "parallel",
+			"problemMatcher": []
+		},
+		{
+			"label": "Install and Run Tasks",
+			"dependsOn": ["backend ", "frontend "],
+			"dependsOrder": "parallel",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Install and Run All",
+			"dependsOn": ["backend ", "frontend "],
+			"dependsOrder": "parallel",
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "backend",
+			"type": "shell",
+			"windows": {
+				"command": "python scripts\\run_backend.py"
+			},
+			"osx": {
+				"command": "python3 scripts/run_backend.py"
+			},
+			"linux": {
+				"command": "python3 scripts/run_backend.py"
+			},
+			"command": "python scripts/run_backend.py",
+			"hide": true,
+			"presentation": {
+				"group": "servers",
+				"panel": "dedicated"
+			}
+		},
+		{
+			"label": "frontend",
+			"type": "shell",
+			"windows": {
+				"command": "python scripts\\run_frontend.py"
+			},
+			"osx": {
+				"command": "python3 scripts/run_frontend.py"
+			},
+			"linux": {
+				"command": "python3 scripts/run_frontend.py"
+			},
+			"command": "python scripts/run_frontend.py",
+			"hide": true,
+			"presentation": {
+				"group": "servers",
+				"panel": "dedicated"
+			}
+		},
+		{
+			"label": "backend ",
+			"type": "shell",
+			"windows": {
+				"command": "python scripts\\run_backend.py --install"
+			},
+			"osx": {
+				"command": "python3 scripts/run_backend.py --install"
+			},
+			"linux": {
+				"command": "python3 scripts/run_backend.py --install"
+			},
+			"command": "python scripts/run_backend.py --install",
+			"hide": true,
+			"presentation": {
+				"group": "servers",
+				"panel": "dedicated"
+			}
+		},
+		{
+			"label": "frontend ",
+			"type": "shell",
+			"windows": {
+				"command": "python scripts\\run_frontend.py --install"
+			},
+			"osx": {
+				"command": "python3 scripts/run_frontend.py --install"
+			},
+			"linux": {
+				"command": "python3 scripts/run_frontend.py --install"
+			},
+			"command": "python scripts/run_frontend.py --install",
+			"hide": true,
+			"presentation": {
+				"group": "servers",
+				"panel": "dedicated"
+			}
+		},
+		{
+			"label": "Clean Temporary Files",
+			"type": "shell",
+			"windows": {
+				"command": "python scripts\\clean.py"
+			},
+			"osx": {
+				"command": "python3 scripts/clean.py"
+			},
+			"linux": {
+				"command": "python3 scripts/clean.py"
+			},
+			"command": "python scripts/clean.py",
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			}
+		}
+	]
+}
