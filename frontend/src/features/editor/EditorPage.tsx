@@ -18,10 +18,10 @@ import {
 } from '../../services/localIntelligence';
 
 const CODE_TEMPLATES: Record<string, string> = {
-  python: `def solve():\n    # Write your Python code here\n    print("Hello from ACPIS!")\n\nif __name__ == "__main__":\n    solve()`,
-  c: `#include <stdio.h>\n\nint main() {\n    // Write your C code here\n    printf("Hello from ACPIS!\\n");\n    return 0;\n}`,
-  cpp: `#include <iostream>\n\nint main() {\n    // Write your C++ code here\n    std::cout << "Hello from ACPIS!" << std::endl;\n    return 0;\n}`,
-  java: `public class Main {\n    public static void main(String[] args) {\n        // Write your Java code here\n        System.out.println("Hello from ACPIS!");\n    }\n}`
+  python: `def solve():\n    # Write your Python code here\n    print("Hello from Adaptive Cognitive Analyzer!")\n\nif __name__ == "__main__":\n    solve()`,
+  c: `#include <stdio.h>\n\nint main() {\n    // Write your C code here\n    printf("Hello from Adaptive Cognitive Analyzer!\\n");\n    return 0;\n}`,
+  cpp: `#include <iostream>\n\nint main() {\n    // Write your C++ code here\n    std::cout << "Hello from Adaptive Cognitive Analyzer!" << std::endl;\n    return 0;\n}`,
+  java: `public class Main {\n    public static void main(String[] args) {\n        // Write your Java code here\n        System.out.println("Hello from Adaptive Cognitive Analyzer!");\n    }\n}`
 };
 
 // Modular Panels Imports

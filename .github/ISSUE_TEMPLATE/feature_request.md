@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea or architectural improvement for ACPIS
+about: Suggest an idea or architectural improvement for Adaptive Cognitive Analyzer
 title: '[FEAT] '
 labels: enhancement
 assignees: ''

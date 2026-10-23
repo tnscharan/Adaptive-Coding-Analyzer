@@ -109,7 +109,7 @@ def run_server(host="127.0.0.1", port=8001, reload=True):
         print("\nBackend server stopped.")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Cross-platform runner for ACPIS backend server.")
+    parser = argparse.ArgumentParser(description="Cross-platform runner for Adaptive Cognitive Analyzer backend server.")
     parser.add_argument("--install", action="store_true", help="Install or update dependencies before running.")
     parser.add_argument("--host", default="127.0.0.1", help="Host interface to bind to (default: 127.0.0.1).")
     parser.add_argument("--port", type=int, default=8001, help="Port to bind to (default: 8001).")

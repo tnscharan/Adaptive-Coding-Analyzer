@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 from app.models import domain as models
 from app.api.routers import sessions_router, execution_router, analytics_router
 
-app = FastAPI(title="Adaptive Cognitive Programming Intelligence System")
+app = FastAPI(title="Adaptive Cognitive Analyzer")
 
 app.add_middleware(
     CORSMiddleware,

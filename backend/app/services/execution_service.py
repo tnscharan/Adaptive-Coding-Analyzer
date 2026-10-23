@@ -213,8 +213,17 @@ class ExecutionManager:
             loop = asyncio.get_event_loop()
             success = await loop.run_in_executor(None, self.build_sandbox)
             if not success:
-                yield {"type": "error", "content": "Failed to compile/build secure sandbox Docker image."}
-                return
+                if ALLOW_LOCAL_FALLBACK:
+                    yield {
+                        "type": "status",
+                        "content": "Sandbox Docker image unavailable. Falling back to local host execution..."
+                    }
+                    async for log_event in self._run_local_async(code, language, timeout):
+                        yield log_event
+                    return
+                else:
+                    yield {"type": "error", "content": "Failed to compile/build secure sandbox Docker image."}
+                    return
 
         # Define file mappings and execution commands
         lang = language.lower().strip()
@@ -341,8 +350,20 @@ class ExecutionManager:
             return True
         except Exception:
             logger.info(f"Sandbox image '{self.image_name}' not found. Compiling...")
-            base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-            path = os.path.join(base_dir, "infra", "docker")
+            current_dir = os.path.abspath(os.path.dirname(__file__))
+            path = None
+            check_dir = current_dir
+            for _ in range(5):
+                candidate = os.path.join(check_dir, "infra", "docker")
+                if os.path.isdir(candidate):
+                    path = candidate
+                    break
+                check_dir = os.path.dirname(check_dir)
+
+            if not path or not os.path.isdir(path):
+                logger.error("Could not find infra/docker directory to build sandbox image.")
+                return False
+
             try:
                 # We use build_sandbox which executes the docker build command
                 self.client.images.build(path=path, dockerfile="sandbox.Dockerfile", tag=self.image_name)

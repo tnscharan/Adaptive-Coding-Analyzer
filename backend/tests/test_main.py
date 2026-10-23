@@ -245,7 +245,10 @@ def test_get_dashboard_with_data():
     assert data["profile_level"] in ["Beginner", "Intermediate", "Advanced"]
 
 # 21. Test Local Execution Fallback
-def test_local_execution_fallback():
+def test_local_execution_fallback(monkeypatch):
+    from app.api.routers import execution_router
+    monkeypatch.setattr(execution_router.execution_manager, "client", None)
+
     # Start session
     sess_res = client.post("/sessions/start", json={"language": "python"})
     assert sess_res.status_code == 200

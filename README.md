@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 Adaptive Cognitive Programming Intelligence System (ACPIS)
+# 🧠 Adaptive Cognitive Analyzer
 
 **An intelligent development environment designed to monitor, audit, and optimize a developer's cognitive coding rhythm in real time.**
 
@@ -26,9 +26,9 @@
 
 ## 📖 Overview
 
-**ACPIS** is a local development environment and cognitive audit suite that analyzes developer typing dynamics, structural Abstract Syntax Tree (AST) complexity, and execution patterns in real time. 
+**Adaptive Cognitive Analyzer** is a local development environment and cognitive audit suite that analyzes developer typing dynamics, structural Abstract Syntax Tree (AST) complexity, and execution patterns in real time. 
 
-Traditional linters only judge syntax correctness; ACPIS bridges the gap between **how code is written** and **how a developer thinks**, measuring cognitive load, pause bursts, algorithmic branching, and editing velocity to produce an actionable developer intelligence profile.
+Traditional linters only judge syntax correctness; Adaptive Cognitive Analyzer bridges the gap between **how code is written** and **how a developer thinks**, measuring cognitive load, pause bursts, algorithmic branching, and editing velocity to produce an actionable developer intelligence profile.
 
 ---
 
@@ -82,7 +82,7 @@ flowchart TD
 
 ## 🧠 Cognitive Telemetry Engine
 
-ACPIS evaluates developers across multiple physiological and algorithmic dimensions:
+Adaptive Cognitive Analyzer evaluates developers across multiple physiological and algorithmic dimensions:
 
 | Metric | Measurement Paradigm | Cognitive Interpretation |
 | :--- | :--- | :--- |
@@ -251,12 +251,12 @@ Real-time bi-directional code execution stream:
 {
   "session_id": 1,
   "language": "python",
-  "code": "print('Hello from ACPIS Sandbox!')"
+  "code": "print('Hello from Adaptive Cognitive Analyzer Sandbox!')"
 }
 
 // Server Stream
 { "type": "status", "content": "Preparing secure container sandbox for python..." }
-{ "type": "stdout", "content": "Hello from ACPIS Sandbox!\n" }
+{ "type": "stdout", "content": "Hello from Adaptive Cognitive Analyzer Sandbox!\n" }
 { "type": "system", "content": "Execution finished with exit code 0" }
 ```
 
@@ -264,7 +264,7 @@ Real-time bi-directional code execution stream:
 
 ## 🧪 Testing & Quality Assurance
 
-ACPIS includes an automated test suite verifying session lifecycles, AST parsing, multi-file heuristic evaluations, and telemetry computations.
+Adaptive Cognitive Analyzer includes an automated test suite verifying session lifecycles, AST parsing, multi-file heuristic evaluations, and telemetry computations.
 
 ### Run Backend Tests
 ```bash

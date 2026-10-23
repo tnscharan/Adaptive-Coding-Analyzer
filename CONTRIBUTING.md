@@ -1,6 +1,6 @@
-# Contributing to ACPIS
+# Contributing to Adaptive Cognitive Analyzer
 
-Thank you for your interest in contributing to the **Adaptive Cognitive Programming Intelligence System (ACPIS)**! We welcome contributions ranging from cognitive telemetry algorithms and AST parsers to UI/UX improvements and documentation.
+Thank you for your interest in contributing to **Adaptive Cognitive Analyzer**! We welcome contributions ranging from cognitive telemetry algorithms and AST parsers to UI/UX improvements and documentation.
 
 ---
 
@@ -20,7 +20,7 @@ cd Adaptive-Coding-Analyzer
 ```
 
 ### 2. Set Up the Development Environment
-ACPIS includes automated VS Code / Antigravity setup tasks:
+Adaptive Cognitive Analyzer includes automated VS Code / Antigravity setup tasks:
 * Press `Ctrl+Shift+B` (or run task **"Install and Run Tasks"**) to automatically set up the virtual environment, install Python and Node dependencies, and start both dev servers.
 
 Alternatively, follow the manual setup:

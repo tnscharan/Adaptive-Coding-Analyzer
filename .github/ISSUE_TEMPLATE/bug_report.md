@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a report to help us improve ACPIS
+about: Create a report to help us improve Adaptive Cognitive Analyzer
 title: '[BUG] '
 labels: bug
 assignees: ''
@@ -12,7 +12,7 @@ A clear and concise description of what the bug is.
 
 ## 🔄 Reproduction Steps
 Steps to reproduce the behavior:
-1. Open the ACPIS application at `...`
+1. Open the Adaptive Cognitive Analyzer application at `...`
 2. Select language `...`
 3. Enter code snippet:
 ```

@@ -82,7 +82,7 @@ def run_dev(port: int = 5173):
         print("\nFrontend server stopped.")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Cross-platform runner for ACPIS frontend server.")
+    parser = argparse.ArgumentParser(description="Cross-platform runner for Adaptive Cognitive Analyzer frontend server.")
     parser.add_argument("--install", action="store_true", help="Install or update npm dependencies before running.")
     parser.add_argument("--port", type=int, default=5173, help="Port to bind to (default: 5173).")
     
